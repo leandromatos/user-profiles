@@ -23,4 +23,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Defines relationship for fetch profile of the user
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphTo
+     */
+    public function profile()
+    {
+        return $this->morphTo();
+    }
 }
