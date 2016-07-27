@@ -16,11 +16,11 @@ class Contributor extends Model
     ];
 
     /**
-     * Get the user profile of contributor
+     * Get the user of contributor
      *
      * @return Illuminate\Database\Eloquent\Relations\MorphOne
      */
-    public function profile()
+    public function user()
     {
         return $this->morphOne(User::class, 'profile');
     }

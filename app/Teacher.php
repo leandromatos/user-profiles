@@ -16,11 +16,11 @@ class Teacher extends Model
     ];
 
     /**
-     * Get the user profile of teacher
+     * Get the user of teacher
      *
      * @return Illuminate\Database\Eloquent\Relations\MorphOne
      */
-    public function profile()
+    public function user()
     {
         return $this->morphOne(User::class, 'profile');
     }
