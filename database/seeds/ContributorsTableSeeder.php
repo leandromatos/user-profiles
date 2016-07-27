@@ -12,13 +12,13 @@ class ContributorsTableSeeder extends Seeder
      */
     public function run()
     {
-        $teacher = Contributor::create([
+        $contributor = Contributor::create([
             'bar' => 'biz',
         ]);
 
-        $teacher->profile()->create([
-            'profile_id'   => $teacher->id,
-            'profile_type' => get_class($teacher),
+        $contributor->user()->create([
+            'profile_id'   => $contributor->id,
+            'profile_type' => get_class($contributor),
             'name'         => 'Joe Blow',
             'email'        => 'joe@example.com',
             'password'     => bcrypt(123),

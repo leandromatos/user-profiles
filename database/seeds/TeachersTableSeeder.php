@@ -16,7 +16,7 @@ class TeachersTableSeeder extends Seeder
             'foo' => 'bar',
         ]);
 
-        $teacher->profile()->create([
+        $teacher->user()->create([
             'profile_id'   => $teacher->id,
             'profile_type' => get_class($teacher),
             'name'         => 'John Doe',
